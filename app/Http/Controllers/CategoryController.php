@@ -12,3 +12,4 @@ class CategoryController extends Controller
         return view ('admin.category.category', compact('categories'));
     }
 }
+

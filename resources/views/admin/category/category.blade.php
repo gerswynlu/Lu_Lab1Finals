@@ -48,12 +48,16 @@
     <div class="col-md-4">
     <div class="card">
     <form>
-  <div class="mb-3">
-    <label for="category_name">Category Name</label>
-    <input type="text" class="form-control" name="category_name">
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <form method="POST" action="{{ url('/submit-category') }}">
+    <h1> Create a category </h1>
+    @csrf
+    <div class="row my-3">
+        <div class="col-md-12 my-2">
+            <label> Name: </label>
+            <input type="text" name="cat_name" id="#" class="form-control" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-dark"> Submit </button>
 </form>
     </div>
   </div>

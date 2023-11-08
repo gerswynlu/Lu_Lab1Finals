@@ -31,10 +31,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
-// Route::get('/category', function (){
-//     return view('admin.category.category');
-// })->name('AllCat');
-
 
 //Category routes
 Route::get('/all/category', [CategoryController::class, 'index'])->name('AllCat');
+
+
