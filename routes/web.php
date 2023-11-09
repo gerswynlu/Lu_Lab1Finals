@@ -33,6 +33,6 @@ Route::middleware([
 
 
 //Category routes
-Route::get('/all/category', [CategoryController::class, 'index'])->name('AllCat');
-
+Route::get('/all/category', [CategoryController::class,'index'])->name('AllCat');
+Route::post('/all/categories', [CategoryController::class, 'store'])->name('categories.store');
 
