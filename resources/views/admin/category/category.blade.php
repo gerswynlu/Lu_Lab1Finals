@@ -17,11 +17,12 @@
                 <th scope="col">Category Name</th>
                 <th scope="col">User ID</th>
                 <th scope="col">Created At</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               @php
-              $i=1;
+              $i = 1;
               @endphp
 
               @foreach ($categories as $category)
@@ -30,8 +31,14 @@
                 <td>{{$category->category_name}}</td>
                 <td>{{$category->user_id}}</td>
                 <td>{{$category->created_at}}</td>
+
+                <td>
+                  <a href="{{url('category/edit/'. $category->id)}}" class="btn btn-info">Edit</a>
+                  <a href="{{url('category/delete/'. $category->id)}}" class="btn btn-danger">Delete</a>
+                </td>
               </tr>
               @endforeach
+
             </tbody>
           </table>
         </div>
