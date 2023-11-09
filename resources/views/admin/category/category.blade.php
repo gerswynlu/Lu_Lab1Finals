@@ -17,11 +17,10 @@
                 <th scope="col">Category Name</th>
                 <th scope="col">User ID</th>
                 <th scope="col">Created At</th>
-                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
-              @php
+            @php
               $i = 1;
               @endphp
 
@@ -38,7 +37,6 @@
                 </td>
               </tr>
               @endforeach
-
             </tbody>
           </table>
         </div>
